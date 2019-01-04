@@ -4,7 +4,7 @@ set -e
 
 go run event_changed.go
 
-if  [ $? ]
+if  [ $? == 1 ]
 then
 	# Generate site
 	go run generate.go > docs/index.html
