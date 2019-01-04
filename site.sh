@@ -2,7 +2,9 @@
 
 set -e
 
-if  go run event_changed.go
+go run event_changed.go
+
+if  [ $? ]
 then
 	# Generate site
 	go run generate.go > docs/index.html
