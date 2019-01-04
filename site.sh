@@ -3,7 +3,7 @@
 set -e
 
 if go run event_changed.go; then
-	echo "Generating site site"
+	echo "Generating site"
 	# Generate site
 	go run generate.go > docs/index.html
 	# Commit it
