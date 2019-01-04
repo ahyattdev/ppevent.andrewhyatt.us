@@ -2,13 +2,7 @@
 
 set -e
 
-echo "Looking at previous hash"
-
-go run event_changed.go
-
-status=$?
-echo "Exit status is $status"
-if echo hi; then
+if go run event_changed.go; then
 	echo "Generating site site"
 	# Generate site
 	go run generate.go > docs/index.html

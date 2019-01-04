@@ -61,8 +61,8 @@ func main() {
 	hashFile.Close()
 
 	// Compare to new hash
-	if oldHash != currentEvent.Hash {
-		// Generate site again
+	if oldHash == currentEvent.Hash {
+		// Don't enerate site again
 		os.Exit(1)
 	}
 }
