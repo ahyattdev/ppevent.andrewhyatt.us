@@ -2,7 +2,8 @@
 
 set -e
 
-if [ event_changed.go ] ; then
+if  go run event_changed.go
+then
 	# Generate site
 	go run generate.go > docs/index.html
 	# Commit it
