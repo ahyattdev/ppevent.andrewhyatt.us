@@ -25,7 +25,7 @@ type currentEventData struct {
     Reward3	string	`plist:"reward_100"`
     Reward4	string	`plist:"reward_1000"`
     MinJobs	string	`plist:"min_jobs"`
-    Hash	string	`pist:"hash"`
+    Hash	string	`plist:"hash"`
 }
 
 func main() {
@@ -112,6 +112,14 @@ func main() {
 	fmt.Println("<th>Under 100</th>")
 	fmt.Print("<td>")
 	fmt.Print(getHumanReadableReward(currentEvent.Reward4))
+	fmt.Println("</td>")
+	fmt.Println("</tr>")
+
+	// Minimum Jobs 
+	fmt.Println("<tr>")
+	fmt.Println("<th>Minimum Jobs</th>")
+	fmt.Print("<td>")
+	fmt.Print(currentEvent.MinJobs)
 	fmt.Println("</td>")
 	fmt.Println("</tr>")
 
