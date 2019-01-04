@@ -1,0 +1,252 @@
+city_id,name
+1,San Diego
+2,Los Angeles
+3,Phoenix
+4,Las Vegas
+5,San Francisco
+6,Honolulu
+7,Portland
+8,Salt Lake City
+9,Denver
+10,Dallas
+11,Houston
+12,Kansas City
+13,Seattle
+14,Spokane
+15,Bismarck
+16,Minneapolis
+17,Chicago
+18,St. Louis
+19,New Orleans
+20,Atlanta
+21,Cincinnati
+22,Detroit
+23,Charleston
+24,Washington DC
+25,Orlando
+26,Miami
+27,Philadelphia
+28,New York
+29,Boston
+30,Toronto
+31,Montreal
+32,Quebec City
+33,Goose Bay
+34,Nuuk
+35,Winnipeg
+36,Calgary
+37,Edmonton
+38,Vancouver
+39,Ketchikan
+40,Juneau
+41,Anchorage
+42,Fairbanks
+43,Nome
+44,Chihuahua
+45,Monterrey
+46,Mexico City
+47,Oaxaca
+48,Havana
+49,Cancun
+50,Santo Domingo
+51,Guatemala
+52,San Jose
+53,Panama City
+54,Yellowknife
+55,Iqaluit
+56,Barrow
+57,Caracas
+58,Bogota
+59,Georgetown
+60,Quito
+61,Iquitos
+62,Manaus
+63,Belem
+64,Fortaleza
+65,Lima
+66,Cuzco
+67,Brasilia
+68,Salvador
+69,La Paz
+70,Rio de Janeiro
+71,Asuncion
+72,Santiago
+73,Cordoba
+74,Buenos Aires
+75,Bariloche
+76,Punta Arenas
+77,Easter Island
+78,Sao Paulo
+79,Reykjavik
+80,Hammerfest
+81,Murmansk
+82,Trondheim
+83,Lulea
+84,Oulu
+85,Bergen
+86,Oslo
+87,Stockholm
+88,Helsinki
+89,St. Petersburg
+90,Glasgow
+91,Copenhagen
+92,Riga
+93,Moscow
+94,Hilo
+95,Inuvik
+96,Whitehorse
+97,Saskatoon
+98,Thunder Bay
+99,Ottawa
+100,Belfast
+101,Manchester
+102,Amsterdam
+103,Berlin
+104,Warsaw
+105,Minsk
+106,London
+107,Brussels
+108,Prague
+109,Kiev
+110,Volgograd
+111,Paris
+112,Bern
+113,Munich
+114,Vienna
+115,Bordeaux
+116,Lyon
+117,Venice
+118,Belgrade
+119,Bucharest
+120,Tbilisi
+121,Lisbon
+122,Seville
+123,Madrid
+124,Barcelona
+125,Rome
+126,Naples
+127,Athens
+128,Istanbul
+129,Norilsk
+130,Tiksi
+131,Pevek
+132,Perm
+133,Novosibirsk
+134,Yakutsk
+135,Magadan
+136,Anadyr
+137,Urumqi
+138,Beijing
+139,Xining
+140,Ulan Bator
+141,Shenyang
+142,Harbin
+143,Vladivostok
+144,Sapporo
+145,Seoul
+146,Sendai
+147,Tokyo
+148,Osaka
+149,Nagasaki
+150,Yinchuan
+151,Shanghai
+152,Nanping
+153,Guangzhou
+154,Hong Kong
+155,Taipei
+156,Hanoi
+157,Xi'an
+158,Chengdu
+159,Rangoon
+160,Bangkok
+161,Lhasa
+162,Dhaka
+163,Manila
+164,Cebu
+165,Palu
+166,Kuching
+167,Jakarta
+168,Padang
+169,Singapore
+170,Kolkata
+171,Butwal
+172,Hyderabad
+173,Bangalore
+174,Mumbai
+175,Ahmedabad
+176,Delhi
+177,Karachi
+178,Kandahar
+179,Kabul
+180,Muscat
+181,Tehran
+182,Baghdad
+183,Kuwait City
+184,Beirut
+185,Jerusalem
+186,Riyadh
+187,Aden
+188,Algiers
+189,Casablanca
+190,Tripoli
+191,Benghazi
+192,Cairo
+193,In Salah
+194,Dakar
+195,Bamako
+196,Timbuktu
+197,Kaduna
+198,Al Fashir
+199,Port Sudan
+200,Djibouti
+201,Monrovia
+202,Lagos
+203,Kisangani
+204,Mogadishu
+205,Kinshasa
+206,Nairobi
+207,Mombasa
+208,Kananga
+209,Zanzibar
+210,Lobito
+211,Livingstone
+212,Lilongwe
+213,Mahajanga
+214,Beira
+215,Windhoek
+216,Johannesburg
+217,Durban
+218,Cape Town
+219,Port Elizabeth
+220,Port Moresby
+221,Darwin
+222,Cairns
+223,Rockhampton
+224,Brisbane
+225,Sydney
+226,Melbourne
+227,Auckland
+228,Wellington
+229,Christchurch
+230,Hobart
+231,Adelaide
+232,Alice Springs
+233,Perth
+234,Port Hedland
+235,Katherine
+236,Broome
+237,Mount Isa
+238,Newman
+239,Geraldton
+240,Kalgoorlie
+241,Broken Hill
+242,Teresina
+243,Araguaina
+244,Porto Velho
+245,Recife
+246,Cuiaba
+247,Campo Grande
+248,Khartoum
+249,Juba
+250,Kampala
+251,Harare
