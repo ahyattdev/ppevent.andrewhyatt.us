@@ -12,6 +12,7 @@ import (
 	"os"
 	"regexp"
 	"strconv"
+	"time"
 )
 
 type currentEventData struct {
@@ -51,19 +52,20 @@ func main() {
 	fmt.Println("<html>")
 	fmt.Println("<head>")
 	fmt.Println("<title>Pocket Planes Global Event</title>")
+	fmt.Println(`<link rel="stylesheet" href="stylesheet.css">`)
 	fmt.Println("</head>")
 	fmt.Println("<body>")
-	fmt.Println("<h1>Pocket Planes Global Event</h1>")
-	fmt.Println(`<div> class="event">`)
-	fmt.Println("<p>The current event is a ")
+	fmt.Println(`<h1 class="center">Pocket Planes Global Event</h1>`)
+	fmt.Println(`<div>`)
+	fmt.Println(`<p class="center">The current event is a `)
 	fmt.Print(currentEvent.Name)
 	fmt.Print(" in ")
 	cityName := getCityName(currentEvent.CityID)
-	fmt.Println(cityName)
-	fmt.Println("</p>")
+	fmt.Print(cityName)
+	fmt.Println(".</p>")
 
 	// Data table
-	fmt.Println("<table>")
+	fmt.Println(`<table class="center">`)
 
 	// Start Time
 	fmt.Println("<tr>")
@@ -81,11 +83,43 @@ func main() {
 	fmt.Println("</td>")
 	fmt.Println("</tr>")
 
-	firstReward := getHumanReadableReward(currentEvent.Reward1)
-	fmt.Println(firstReward)
+	// Winner
+	fmt.Println("<tr>")
+	fmt.Println("<th>Winner</th>")
+	fmt.Print("<td>")
+	fmt.Print(getHumanReadableReward(currentEvent.Reward1))
+	fmt.Println("</td>")
+	fmt.Println("</tr>")
+
+	// Top 10
+	fmt.Println("<tr>")
+	fmt.Println("<th>Top 10</th>")
+	fmt.Print("<td>")
+	fmt.Print(getHumanReadableReward(currentEvent.Reward2))
+	fmt.Println("</td>")
+	fmt.Println("</tr>")
+
+	// Top 100
+	fmt.Println("<tr>")
+	fmt.Println("<th>Top 100</th>")
+	fmt.Print("<td>")
+	fmt.Print(getHumanReadableReward(currentEvent.Reward3))
+	fmt.Println("</td>")
+	fmt.Println("</tr>")
+
+	// Under 100
+	fmt.Println("<tr>")
+	fmt.Println("<th>Under 100</th>")
+	fmt.Print("<td>")
+	fmt.Print(getHumanReadableReward(currentEvent.Reward4))
+	fmt.Println("</td>")
+	fmt.Println("</tr>")
 
 	fmt.Println("</table>")
 	fmt.Println("</div>")
+
+	fmt.Println(`<p class="footer">Created by <a href="https://www.andrewhyatt.us">Andrew Hyatt</p>`)
+
 	fmt.Println("</body>")
 	fmt.Println("</html>")
 }
@@ -168,5 +202,5 @@ func getPlaneName(id string) string {
 }
 
 func readableTime(unixTime float64) string {
-	return "time"
+	return time.Unix(int64(unixTime), 0).UTC().Format(time.UnixDate)
 }
