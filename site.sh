@@ -18,7 +18,8 @@ if go run event_changed.go; then
 	# Generate site
 	go run generate.go > docs/index.html
 	# Commit it
-	git commit -am "Event changed"
+	git add index.html
+	git commit -m "Event changed"
 	# Push it
 	git push
 else
