@@ -29,6 +29,18 @@ type currentEventData struct {
 }
 
 func main() {
+	if !eventChanged() {
+		fmt.Println("Event not changed, not generating again")
+		return
+	}
+
+	out, err := os.Create("docs/index.html")
+	if err != nil {
+		log.Fatal("Failed creating output file", err)
+	}
+
+	os.Stdout = out
+
 	// Load event data over the internet
 	resp, err := http.Get("http://ppupdate.nimblebit.com/event/current")
 
@@ -211,4 +223,46 @@ func getPlaneName(id string) string {
 
 func readableTime(unixTime float64) string {
 	return time.Unix(int64(unixTime), 0).UTC().Format(time.UnixDate)
+}
+
+func eventChanged() bool {
+	// Load event data over the internet
+	resp, err := http.Get("http://ppupdate.nimblebit.com/event/current")
+
+	if err != nil {
+		log.Fatal("Error loading current event", err)
+	}
+
+	plistBytes, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		log.Fatal(err)
+	}
+	buffReader := bytes.NewReader(plistBytes)
+
+	var currentEvent currentEventData
+	decoder := plist.NewDecoder(buffReader)
+	err = decoder.Decode(&currentEvent)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var oldHash string = ""
+
+	// Load old hash
+	oldHashData, err := ioutil.ReadFile("old-hash.txt")
+	if err == nil {
+		oldHash = string(oldHashData)
+	}
+
+	// Overwrite it with current hash
+	hashFile, err := os.Create("old-hash.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	hashFile.WriteString(currentEvent.Hash)
+	hashFile.Close()
+
+	// Compare to new hash
+	return oldHash != currentEvent.Hash
 }
